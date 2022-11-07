@@ -1,31 +1,31 @@
 from slack import RTMClient
 import psycopg2
-hostname = 'localhost'
-database = 'demo'
-username = 'postgres'
-pwd = 'a'
-port_id = 5432
-conn = None
+from utils import santify_text
+
+from utils import db_connection_config
 
 
 def search_db(text):
     print("entered")
     # Establishing the connection
+
+    config = db_connection_config()
+    # Establishing the connection
     conn = psycopg2.connect(
-        host=hostname,
-        dbname=database,
-        user=username,
-        password=pwd,
-        port=port_id)
+        host=config["hostname"],
+        dbname=config["database"],
+        user=config["username"],
+        password=config["pwd"],
+        port=config["port_id"])
     # Creating a cursor object using the cursor() method
     cursor = conn.cursor()
-    create_script = f"""SELECT * FROM botdb1 where alert LIKE  '%{text}%'"""
+    create_script = f"""SELECT * FROM documentationdb where alert LIKE  '%{text}%'"""
     print("create_script", create_script)
     cursor.execute(create_script)
     a = cursor.fetchone()
-    print(a[2])
     cursor.close()
     print("--------------------- done ---------------------")
+    return a[2]
 
 
 @RTMClient.run_on(event="message")
@@ -33,21 +33,25 @@ def amusebot(**payload):
     data = payload["data"]
     web_client = payload["web_client"]
     bot_id = data.get("bot_id", "")
-
+    timestamp = data.get("ts", "")
+    print("\n\n -------------------------------- \ndata", data)
+    text = ''
     # If a message is not send by the bot
-    if bot_id == "":
+    if bot_id == "B049FKBTWMU":
         channel_id = data["channel"]
 
         # Extracting message send by the user on the slack
-        text = data.get("text", "")
-        text = text.split(">")[-1].strip()
-
-        response = ""
-        print("text", text)
-        search_db(text)
-
-        # Sending message back to slack
-        web_client.chat_postMessage(channel=channel_id, text=response)
+        title = data.get("attachments", "")[0].get("fallback").split(":", 1)[1]
+        print("^^^ title", title)
+        title = santify_text(title)
+        if title:
+            response = ""
+            response = search_db(title)
+            print("****", response)
+            # Sending message back to slack
+            web_client.chat_postMessage(
+                channel=channel_id, text=response, thread_ts=timestamp)
+            print("################################## DONE #############3")
 
 
 try:
