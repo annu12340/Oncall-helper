@@ -1,19 +1,13 @@
 import requests
 import json
-from datetime import datetime, timedelta
+from utils import find_date_N_days_ago
 
 
 pagerduty_url = "https://api.pagerduty.com/incidents"
 
 
-def find_date_N_days_ago(n):
-    today = datetime.now()
-    n_days_ago = today - timedelta(days=n)
-    return n_days_ago.date()
-
-
-def get_pd_alerts():
-    date = str(find_date_N_days_ago(3))
+def get_pd_alerts(days=3):
+    date = str(find_date_N_days_ago(days))
     querystring = {"since": date}
 
     headers = {
