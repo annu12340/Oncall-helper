@@ -1,7 +1,11 @@
 import psycopg2
-import psycopg2.extras
+import logging
 
 from utils import db_connection_config
+
+log_format = "%(asctime)s::%(levelname)s::%(name)s::" "%(filename)s::%(lineno)d::%(message)s"
+logging.basicConfig(filename='logs\mylogs.log',
+                    level='DEBUG', format=log_format)
 
 
 def create_table():
@@ -18,14 +22,15 @@ def create_table():
     cursor = conn.cursor()
 
     # Doping EMPLOYEE table if already exists.
-    cursor.execute('DROP TABLE IF EXISTS documentationdb')
-    create_script = ''' CREATE TABLE IF NOT EXISTS documentationdb (
+    cursor.execute('DROP TABLE IF EXISTS botdb1')
+    create_script = ''' CREATE TABLE IF NOT EXISTS botdb1 (
                                             id      int PRIMARY KEY,
                                             alert    varchar(100) NOT NULL,
                                             alert_response  varchar(540) NOT NULL) '''
+    logging.debug("Executing the script ", create_script)
     cursor.execute(create_script)
     conn.commit()
-    print("Table created successfully........")
+    logging.info("------------- Successfully created the table ---------")
     cursor.close()
 
 
@@ -41,14 +46,11 @@ def insert_into_table(database_content):
     # Creating a cursor object using the cursor() method
     cursor = conn.cursor()
 
-    insert_script = 'INSERT INTO documentationdb (id, alert,alert_response ) VALUES (%s, %s, %s)'
-    for record in database_content:
-        print("\n\n\n", record)
-        cursor.execute(insert_script, record)
+    insert_script = 'INSERT INTO botdb1 (id, alert,alert_response ) VALUES (%s, %s, %s)'
 
-    # cursor.execute('SELECT * FROM documentationdb')
-    # for record in cursor.fetchall():
-    #     print(record[0], record[1], record[2])
+    for record in database_content:
+        logging.debug("Inserting ", record, " into the table")
+        cursor.execute(insert_script, record)
     conn.commit()
     cursor.close()
     conn.close()

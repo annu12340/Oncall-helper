@@ -1,8 +1,11 @@
 from slack import RTMClient
 import psycopg2
-from utils import santify_text
+import logging
+from utils import santify_text, db_connection_config
 
-from utils import db_connection_config
+log_format = "%(asctime)s::%(levelname)s::%(name)s::" "%(filename)s::%(lineno)d::%(message)s"
+logging.basicConfig(filename='logs\mylogs.log',
+                    level='DEBUG', format=log_format)
 
 
 def search_db(text):
@@ -19,13 +22,13 @@ def search_db(text):
         port=config["port_id"])
     # Creating a cursor object using the cursor() method
     cursor = conn.cursor()
-    create_script = f"""SELECT * FROM documentationdb where alert LIKE  '%{text}%'"""
-    print("create_script", create_script)
-    cursor.execute(create_script)
-    a = cursor.fetchone()
+    select_script = f"""SELECT * FROM botdb1 where alert LIKE  '%{text}%'"""
+    logging.debug("Executing the script ", select_script)
+    cursor.execute(select_script)
+    result = cursor.fetchone()
+    logging.info("------------- Successfully created the table ---------")
     cursor.close()
-    print("--------------------- done ---------------------")
-    return a[2]
+    return result[2]
 
 
 @RTMClient.run_on(event="message")
@@ -34,24 +37,22 @@ def amusebot(**payload):
     web_client = payload["web_client"]
     bot_id = data.get("bot_id", "")
     timestamp = data.get("ts", "")
-    print("\n\n -------------------------------- \ndata", data)
-    text = ''
+
     # If a message is not send by the bot
     if bot_id == "B049FKBTWMU":
+        logging.info("------------- Pagerduty has send an alert ---------")
         channel_id = data["channel"]
 
         # Extracting message send by the user on the slack
         title = data.get("attachments", "")[0].get("fallback").split(":", 1)[1]
-        print("^^^ title", title)
         title = santify_text(title)
         if title:
             response = ""
             response = search_db(title)
-            print("****", response)
             # Sending message back to slack
             web_client.chat_postMessage(
                 channel=channel_id, text=response, thread_ts=timestamp)
-            print("################################## DONE #############3")
+            logging.info("------------- Send message to slack ---------")
 
 
 try:

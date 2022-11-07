@@ -8,10 +8,10 @@ from bs4 import BeautifulSoup
 from database_connection import create_table, insert_into_table
 from utils import santify_text
 
-log_format = "%(asctime)s::%(levelname)s::%(name)s::"\
-             "%(filename)s::%(lineno)d::%(message)s"
+log_format = "%(asctime)s::%(levelname)s::%(name)s::" "%(filename)s::%(lineno)d::%(message)s"
 logging.basicConfig(filename='logs\mylogs.log',
                     level='DEBUG', format=log_format)
+
 # Initialize a new database
 create_table()
 
@@ -31,11 +31,8 @@ def web_scrapper(result):
         alert = santify_text(alert)
 
         alert_response = result.find("p")
-        print("alert_response = result.find", result.find("p"))
         alert_response = santify_text(str(alert_response))
         database_content.append((count, alert, alert_response))
-
-    # print("Database content:", database_content)
     return database_content
 
 
