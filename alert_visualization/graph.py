@@ -1,45 +1,24 @@
 
 import pandas as pd
 import plotly.express as px
-from plotly.subplots import make_subplots
-import plotly.graph_objs as go
-
-import dash_core_components as dcc
-import plotly.express as px
-import plotly.subplots as sp
-from plotly.subplots import make_subplots
 
 
-def create_graph1(alert_dic1, alert_dic2):
-    key1 = list(alert_dic1.keys())
-    values1 = list(alert_dic1.values())
-
-    # Create subplots: use 'domain' type for Pie subplot
-    fig = make_subplots(rows=2, cols=1,
-                        specs=[
-                            [{'type': 'domain'}], [{'type': 'xy'}]
-                        ])
-    fig.add_trace(go.Pie(labels=key1, values=values1, name="Alert type"),
-                  1, 1)
-    fig.add_trace(go.Bar(x=[1, 2, 3], y=[4, 5, 6],
-                         marker=dict(color=[4, 5, 6])),
-                  2, 1)
-
-    fig.update_layout(title="Dashboard", height=1300, showlegend=True)
-    fig.show()
-
-
-def create_graph(data):
+def create_pie_chart(data):
     df = pd.DataFrame(list(data), columns=['alert', 'count'])
     fig = px.pie(df, values='count', names='alert',
                  color_discrete_sequence=px.colors.sequential.Aggrnyl)
-    print("df\n\n\n\n", df)
+    fig.write_image("images/alert_frequency.png")
     fig.show()
-    fig.write_image("images/fig1.png")
 
 
-def create_graph2(data):
+def create_bar_chart(data):
     df = pd.DataFrame(list(data), columns=['alert', 'count'])
-    fig = px.pie(df, values='count', names='alert',
-                 color_discrete_sequence=px.colors.sequential.Aggrnyl)
+    fig = px.bar(df, y='count', x='alert')
+    fig.write_image("images/alert_count.png")
     fig.show()
+
+
+l = {'|hadoop | proc_cluster@uk: hadoop sharedcachemanager JVM Uptime < 50': 15, '|Log pipeline Demux Replicator | abc_cluster@usa Category Latency > 100': 10, '|Onprem Replicator| efg_cluster@india: JVM uptime < 60': 9, '|GCP| xyz service down': 7, '|Docker container| Docker restart issues': 6,
+     '|onprem| Capacity threshold execceded': 5, '|Hadoop| Unable to run new jobs on hadoop': 4, '|Hadoop| tst@india: Namenode Uptime Rate < 30': 2, '|hadoop| core-site.xml file missing': 1, }
+alert_dic = sorted(l.items(), key=lambda x: x[1],  reverse=True)
+create_pie_chart(alert_dic)

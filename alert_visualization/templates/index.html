@@ -13,7 +13,7 @@
       <script src="https://cdn.plot.ly/plotly-2.16.1.min.js"></script>
    </head>
 
-   <body id="page-top">
+   <body>
       <div id="wrapper">
          <!-- Sidebar -->
          <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -28,17 +28,6 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0" />
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-               <a class="nav-link" href="index.html">
-                  <i class="fas fa-fw fa-tachometer-alt"></i>
-                  <span>Dashboard</span></a
-               >
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider" />
-
             <!-- Heading -->
             <div class="sidebar-heading">Interface</div>
 
@@ -46,7 +35,7 @@
             <li class="nav-item">
                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                   <i class="fas fa-fw fa-cog"></i>
-                  <span>Components</span>
+                  <span>Quick links</span>
                </a>
             </li>
 
@@ -60,7 +49,7 @@
             <li class="nav-item">
                <a class="nav-link" href="charts.html">
                   <i class="fas fa-fw fa-chart-area"></i>
-                  <span>Charts</span></a
+                  <span>lorem ipseum</span></a
                >
             </li>
 
@@ -68,7 +57,13 @@
             <li class="nav-item">
                <a class="nav-link" href="tables.html">
                   <i class="fas fa-fw fa-table"></i>
-                  <span>Tables</span></a
+                  <span>lorem ipseum</span></a
+               >
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="tables.html">
+                  <i class="fas fa-fw fa-table"></i>
+                  <span>lorem ipseum</span></a
                >
             </li>
 
@@ -117,14 +112,13 @@
 
                   <!-- Content Row -->
                   <div class="row">
-                     <!-- Earnings (Monthly) Card Example -->
-                     <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-left-primary shadow h-100 py-2">
+                     <div class="col-xl-4 col-md-6 mb-4">
+                        <div class="card border-left-danger shadow h-100 py-2">
                            <div class="card-body">
                               <div class="row no-gutters align-items-center">
                                  <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Monthly)</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                    <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">No of alerts in this day</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">{{ current_alerts }}</div>
                                  </div>
                                  <div class="col-auto">
                                     <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -134,14 +128,13 @@
                         </div>
                      </div>
 
-                     <!-- Earnings (Monthly) Card Example -->
-                     <div class="col-xl-3 col-md-6 mb-4">
+                     <div class="col-xl-4 col-md-6 mb-4">
                         <div class="card border-left-success shadow h-100 py-2">
                            <div class="card-body">
                               <div class="row no-gutters align-items-center">
                                  <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Earnings (Annual)</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">No of alerts in this week</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">112</div>
                                  </div>
                                  <div class="col-auto">
                                     <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -151,16 +144,15 @@
                         </div>
                      </div>
 
-                     <!-- Earnings (Monthly) Card Example -->
-                     <div class="col-xl-3 col-md-6 mb-4">
+                     <div class="col-xl-4 col-md-6 mb-4">
                         <div class="card border-left-info shadow h-100 py-2">
                            <div class="card-body">
                               <div class="row no-gutters align-items-center">
                                  <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
+                                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Number of alerts in this month</div>
                                     <div class="row no-gutters align-items-center">
                                        <div class="col-auto">
-                                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">497</div>
                                        </div>
                                        <div class="col">
                                           <div class="progress progress-sm mr-2">
@@ -176,54 +168,39 @@
                            </div>
                         </div>
                      </div>
-
-                     <!-- Pending Requests Card Example -->
-                     <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-left-warning shadow h-100 py-2">
-                           <div class="card-body">
-                              <div class="row no-gutters align-items-center">
-                                 <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending Requests</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                                 </div>
-                                 <div class="col-auto">
-                                    <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
                   </div>
 
                   <!-- Content Row -->
 
                   <div class="row">
                      <!-- Area Chart -->
-                     <div class="col-xl-8 col-lg-7">
+                     <div class="col-xl-7 col-lg-7">
                         <div class="card shadow mb-4">
                            <!-- Card Header - Dropdown -->
                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                              <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+                              <h6 class="m-0 font-weight-bold text-primary">Alert overview</h6>
                            </div>
                            <!-- Card Body -->
                            <div class="card-body">
                               <div class="chart-area">
-                                 <img src="alert_visulization\images\fig1.png" alt="" />
+                                 <!-- <img src="images/alert_count.png" alt="" /> -->
+                                 <img src="https://user-images.githubusercontent.com/43414928/200388822-d7de3c42-5141-413c-b663-62125e91dbd6.png" alt="" width="650" height="450" />
                               </div>
                            </div>
                         </div>
                      </div>
 
                      <!-- Pie Chart -->
-                     <div class="col-xl-4 col-lg-5">
+                     <div class="col-xl-5 col-lg-5">
                         <div class="card shadow mb-4">
                            <!-- Card Header - Dropdown -->
                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                              <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                              <h6 class="m-0 font-weight-bold text-primary">Alert frequencies</h6>
                            </div>
                            <div class="card-body">
                               <div class="chart-area">
-                                 <img src="alert_visulization\images\fig2.png" alt="" />
+                                 <img src="https://user-images.githubusercontent.com/43414928/200386846-b0c441c2-8244-497b-b17d-dd2a88f8c4c6.png" alt="" width="400" height="450" />
+                                 <!-- <img src="images/alert_frqeuncy.png" alt="" /> -->
                               </div>
                            </div>
                         </div>
@@ -232,9 +209,7 @@
                </div>
                <!-- /.container-fluid -->
             </div>
-            <!-- End of Main Content -->
          </div>
-         <!-- End of Content Wrapper -->
       </div>
    </body>
 </html>

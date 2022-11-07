@@ -1,14 +1,15 @@
 import requests
 import json
-from utils import find_date_N_days_ago
+import logging
+from datetime import datetime, timedelta
 
 
 pagerduty_url = "https://api.pagerduty.com/incidents"
 
 
-def get_pd_alerts(days=3):
-    date = str(find_date_N_days_ago(days))
-    querystring = {"since": date}
+def get_pd_alerts(no_of_days=3):
+    n_days_ago = datetime.now() - timedelta(days=no_of_days)
+    date = n_days_ago.date()
 
     headers = {
         "Content-Type": "application/json",
@@ -17,8 +18,6 @@ def get_pd_alerts(days=3):
     }
 
     response = requests.request(
-        "GET", pagerduty_url, headers=headers, params=querystring)
-
+        "GET", pagerduty_url, headers=headers, params={"since": date})
     result = json.loads(response.text).get("incidents")
-    print("\n\n ---------------------", result)
     return result
