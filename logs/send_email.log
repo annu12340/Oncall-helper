@@ -1,0 +1,194 @@
+2022-11-07 22:59:16,718::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-07 22:59:18,075::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-10-31 HTTP/1.1" 200 4316
+2022-11-07 22:59:18,228::INFO::root::send_email.py::19::Got pagerduty api response
+2022-11-07 22:59:18,249::DEBUG::root::send_email.py::60::EmailMessage object is created
+2022-11-07 22:59:21,046::INFO::root::send_email.py::67::------------- Email send successfully ---------
+2022-11-08 00:51:54,633::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 00:51:54,666::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 00:51:56,116::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 00:51:56,131::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 00:51:56,143::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 00:53:44,126::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 00:53:44,157::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 00:53:45,548::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 00:53:45,555::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 00:53:45,558::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 00:53:45,565::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 00:53:48,781::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 00:54:29,085::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 00:54:29,098::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 00:54:30,442::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 00:54:30,458::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 00:54:30,464::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 00:54:30,469::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 00:54:34,540::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 00:55:14,872::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 00:55:14,872::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 00:55:16,227::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 00:55:16,236::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 00:55:16,239::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 00:55:16,246::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 00:55:18,890::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 00:56:24,575::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 00:56:24,590::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 00:56:25,985::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 00:56:25,998::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 00:56:26,006::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 00:56:26,015::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 00:56:29,717::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 00:57:10,107::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 00:57:10,111::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 00:57:11,481::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 00:57:11,488::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 00:57:11,488::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 00:57:11,488::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 00:57:14,105::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 00:57:54,489::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 00:57:54,508::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 00:57:55,920::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 00:57:55,926::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 00:57:55,931::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 00:57:55,937::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 00:57:58,624::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 00:58:39,191::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 00:58:39,209::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 00:58:40,644::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 00:58:40,651::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 00:58:40,655::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 00:58:40,660::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 00:58:43,200::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 00:59:23,564::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 00:59:23,587::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 00:59:25,493::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 00:59:25,502::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 00:59:25,509::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 00:59:25,514::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 00:59:28,076::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 01:00:08,506::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:00:08,506::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 01:00:09,918::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 01:00:09,933::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 01:00:09,945::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 01:00:09,959::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 01:00:12,968::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 01:00:53,365::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:00:53,377::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 01:00:54,790::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 01:00:54,804::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 01:00:54,816::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 01:00:54,833::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 01:00:57,461::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 01:01:37,834::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:01:37,847::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 01:01:39,258::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 01:01:39,266::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 01:01:39,270::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 01:01:39,276::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 01:01:42,192::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 01:02:22,517::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:02:22,521::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 01:02:23,893::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 01:02:23,909::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 01:02:23,922::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 01:02:23,929::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 01:02:27,561::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 01:03:07,906::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:03:07,913::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 01:03:09,312::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 01:03:09,325::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 01:03:09,337::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 01:03:09,353::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 01:03:12,390::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 01:03:52,783::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:03:52,795::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 01:03:54,146::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 01:03:54,159::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 01:03:54,168::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 01:03:54,178::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 01:03:56,942::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 01:04:37,242::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:04:37,242::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 01:04:38,642::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 01:04:38,646::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 01:04:38,650::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 01:04:38,655::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 01:04:41,652::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 01:05:21,964::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:05:21,977::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 01:05:23,311::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 01:05:23,326::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 01:05:23,342::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 01:05:23,357::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 01:05:26,978::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 01:06:07,249::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:06:07,263::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 01:06:08,663::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 01:06:08,667::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 01:06:08,667::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 01:06:08,667::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 01:06:11,410::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 01:06:51,658::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:06:51,666::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 01:06:53,032::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 01:06:53,044::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 01:06:53,052::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 01:06:53,061::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 01:06:55,610::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 01:07:35,897::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:07:35,897::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 01:07:37,297::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 01:07:37,313::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 01:07:37,328::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 01:07:37,344::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 01:07:40,842::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 01:08:21,133::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:08:21,145::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 01:08:22,586::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 01:08:22,586::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 01:08:22,601::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 01:08:22,601::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 01:08:25,181::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 01:09:05,480::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:09:05,489::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 01:09:06,875::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 01:09:06,890::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 01:09:06,906::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 01:09:06,912::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 01:09:10,862::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 01:09:51,128::DEBUG::schedule::__init__.py::660::Running job Job(interval=40, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:09:51,142::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 01:09:52,554::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 01:09:52,579::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 01:09:52,586::DEBUG::root::send_email.py::38::Generated email body content 
+2022-11-08 01:09:52,599::DEBUG::root::send_email.py::61::EmailMessage object is created
+2022-11-08 01:09:55,619::INFO::root::send_email.py::68::------------- Email send successfully ---------
+2022-11-08 01:52:52,262::DEBUG::schedule::__init__.py::660::Running job Job(interval=7, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:52:52,277::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 01:52:53,677::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 01:52:53,683::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 01:52:53,686::DEBUG::root::send_email.py::40::Generated email body content 
+2022-11-08 01:52:53,691::DEBUG::root::send_email.py::63::EmailMessage object is created
+2022-11-08 01:52:58,322::INFO::root::send_email.py::70::------------- Email send successfully ---------
+2022-11-08 01:53:05,407::DEBUG::schedule::__init__.py::660::Running job Job(interval=7, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:53:05,412::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 01:53:07,056::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 01:53:07,060::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 01:53:07,066::DEBUG::root::send_email.py::40::Generated email body content 
+2022-11-08 01:53:07,072::DEBUG::root::send_email.py::63::EmailMessage object is created
+2022-11-08 01:53:10,148::INFO::root::send_email.py::70::------------- Email send successfully ---------
+2022-11-08 01:53:17,205::DEBUG::schedule::__init__.py::660::Running job Job(interval=7, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:53:17,205::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 01:53:18,500::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 01:53:18,507::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 01:53:18,511::DEBUG::root::send_email.py::40::Generated email body content 
+2022-11-08 01:53:18,518::DEBUG::root::send_email.py::63::EmailMessage object is created
+2022-11-08 01:53:21,310::INFO::root::send_email.py::70::------------- Email send successfully ---------
+2022-11-08 01:53:28,360::DEBUG::schedule::__init__.py::660::Running job Job(interval=7, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:53:28,360::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443
+2022-11-08 01:53:29,781::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://api.pagerduty.com:443 "GET /incidents?since=2022-11-01 HTTP/1.1" 200 4316
+2022-11-08 01:53:29,781::INFO::root::send_email.py::20::Got pagerduty api response
+2022-11-08 01:53:29,807::DEBUG::root::send_email.py::40::Generated email body content 
+2022-11-08 01:53:29,824::DEBUG::root::send_email.py::63::EmailMessage object is created
+2022-11-08 01:53:32,705::INFO::root::send_email.py::70::------------- Email send successfully ---------
+2022-11-08 01:53:39,762::DEBUG::schedule::__init__.py::660::Running job Job(interval=7, unit=seconds, do=send_mail, args=(), kwargs={})
+2022-11-08 01:53:39,762::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): api.pagerduty.com:443

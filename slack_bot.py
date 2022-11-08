@@ -1,10 +1,11 @@
+import os
 from slack import RTMClient
 import psycopg2
 import logging
 from utils import santify_text, db_connection_config
-
+from password_config import BOT_TOKEN
 log_format = "%(asctime)s::%(levelname)s::%(name)s::" "%(filename)s::%(lineno)d::%(message)s"
-logging.basicConfig(filename='logs\mylogs.log',
+logging.basicConfig(filename='logs\slack_bot.log',
                     level='DEBUG', format=log_format)
 
 
@@ -32,13 +33,13 @@ def search_db(text):
 
 
 @RTMClient.run_on(event="message")
-def amusebot(**payload):
+def bot(**payload):
     data = payload["data"]
     web_client = payload["web_client"]
     bot_id = data.get("bot_id", "")
     timestamp = data.get("ts", "")
 
-    # If a message is not send by the bot
+    # If message is send from pagerduty
     if bot_id == "B049FKBTWMU":
         logging.info("------------- Pagerduty has send an alert ---------")
         channel_id = data["channel"]
@@ -57,7 +58,7 @@ def amusebot(**payload):
 
 try:
     rtm_client = RTMClient(
-        token="xoxb-4328155727859-4340911367537-hYcqbJH9x6IvRoU5WILTNI6e")
+        token=BOT_TOKEN)
     print("Bot is up and running!")
     rtm_client.start()
 except Exception as err:

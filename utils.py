@@ -1,5 +1,4 @@
 from datetime import datetime, timedelta
-from beautifultable import BeautifulTable
 
 
 def tabulate_response(alert_dic):
