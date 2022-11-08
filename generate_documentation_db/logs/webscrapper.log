@@ -1,0 +1,15 @@
+2022-11-08 09:22:07,002::INFO::root::database_connection.py::31::------------- Successfully created the table ---------
+2022-11-08 09:22:07,014::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): test-documentation101.netlify.app:443
+2022-11-08 09:22:07,340::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://test-documentation101.netlify.app:443 "GET / HTTP/1.1" 200 2242
+2022-11-08 09:22:07,365::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): test-documentation101.netlify.app:443
+2022-11-08 09:22:07,594::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://test-documentation101.netlify.app:443 "GET / HTTP/1.1" 200 2242
+2022-11-08 09:22:07,614::INFO::root::web_scrapper.py::49::New content has been added/removed
+2022-11-08 09:24:07,648::INFO::root::database_connection.py::31::------------- Successfully created the table ---------
+2022-11-08 09:24:07,657::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): test-documentation101.netlify.app:443
+2022-11-08 09:24:08,236::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://test-documentation101.netlify.app:443 "GET / HTTP/1.1" 200 2242
+2022-11-08 09:27:23,015::INFO::root::database_connection.py::31::------------- Successfully created the table ---------
+2022-11-08 09:27:23,023::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): test-documentation101.netlify.app:443
+2022-11-08 09:27:23,315::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://test-documentation101.netlify.app:443 "GET / HTTP/1.1" 200 2242
+2022-11-08 09:29:16,074::INFO::root::database_connection.py::31::------------- Successfully created the table ---------
+2022-11-08 09:29:16,085::DEBUG::urllib3.connectionpool::connectionpool.py::1003::Starting new HTTPS connection (1): test-documentation101.netlify.app:443
+2022-11-08 09:29:16,416::DEBUG::urllib3.connectionpool::connectionpool.py::456::https://test-documentation101.netlify.app:443 "GET / HTTP/1.1" 200 2242
